@@ -35,3 +35,13 @@
 // server.listen(5000,()=>{
 //   console.log('server listening on port 5000...')
 // })
+
+const EventEmitter = require('events');
+
+const customEmitter = new EventEmitter();
+
+customEmitter.on('response', ()=>{
+    console.log(`data recieved `)
+})
+
+customEmitter.emit('response')
